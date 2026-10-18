@@ -10,9 +10,9 @@
     - template: jinja
     - source: salt://sudoers/templates/sudoers.jinja
     - context:
-      for_user: {{ for_user }}
-      sudo: {{ sudo }}
-      config: {{ config|tojson }}
+        for_user: {{ for_user }}
+        sudo: {{ sudo }}
+        config: {{ config|tojson }}
 
 {% elif state == 'absent' %}
 /etc/sudoers.d/{{ filename }}:
